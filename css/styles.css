@@ -1,0 +1,520 @@
+    /* ==========================================================================
+   Global Overrides
+  ========================================================================== */
+
+* {
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    /*   border: 1px solid red; */
+}
+
+.clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+
+/* ==========================================================================
+   My custom styles
+  ========================================================================== */
+
+
+/*  SITE COLORS for your reference:
+    (refer to styleguide.jpg for hex codes or use Sip to pick colors from design)
+
+    White - #ffffff;
+    Light Grey -
+    Dark Grey -
+    Grey/Black(text color) -
+    Yellow -
+    Red -
+*/
+
+
+/* Global
+   =============== */
+
+body {
+    /* Set some defaults! font-family, font-size, color, etc. */
+    background-image: url("/imgs/pbg.png");
+    background-color: #D4DEE4;
+    font-family: 'Libre Franklin', helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+
+/* Text Styles (a, a:hover, a:visited, a:active, p, h1, h2, h3, h4, etc.)
+
+=============== */
+
+p {
+    padding: 10px;
+    font-size: .85em;
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #C2D6DE;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+}
+
+.title {
+    position: fixed;
+    width:100%;
+    top:0px;
+    margin: 0;
+    padding: .70em;
+     z-index: 2;
+    font-family: 'Open San', helvetica, serif;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: .99em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: bold;
+    font-style: none;
+    background-color: #1C1D1D;
+    color:#fff;
+    border: 1px solid #000;
+    z-index: 999;
+}
+
+
+    
+    a {
+        /* Set some default styles for anchor links (color, text decoration) */
+        
+        
+    }
+
+    /* Navigation
+   ================= */
+
+.primary {   
+     background-color: #000;
+     list-style-type: none;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     display:inline-block;
+     text-align: center;
+     border: 0px solid #000; 
+}
+
+/*-----Change NAVBAR colour-----*/
+
+.primary {
+  /*background: transparent;*/    
+  border: none;
+  transition: 0.2s all linear;	
+}
+
+.primary.change-color {
+  background-color: #3B5462;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(221,221,221,1);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(221,221,221,1);
+  box-shadow: 0px 0px 4px 0px rgba(221,221,221,1);
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+     display:inline-block;
+     margin-left: 50px;
+     text-align: center; 
+}
+
+  .primary a {
+    transition: 0.3s ease;
+    font-family: 'Roboto Condensed', helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+    font-size: .95em;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.primary a:hover {
+    transition: 0.3s ease-out;
+    color: #6ED1F5;
+   border-bottom: 4px solid #ffffff;
+    padding: 6px 0;    
+}
+
+
+
+    /* Header
+   ========= */
+header {
+    padding: 0px;
+    width: 100%;
+    background: #eee;
+    border: 0px solid #000;
+    margin: 0 auto;
+    
+}
+
+.inner-header /*temp*/ {
+    background-color: #777;
+    width: 90%;
+    padding: 0px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+    
+    
+    /* Layout (columns, floats, etc.)
+   ============================== */
+     
+#container {
+        width: 85%;
+        position: relative;
+        top: 38px; /* ISSUE HERE - Border Shifts up when border is added. */
+        margin: auto;
+        background-color: #ffffff !important;
+        border: 1px solid #DDDDDD;
+    
+    }
+
+   /* Content
+   ============================== */
+   
+.about {
+    
+}
+
+.skills {
+    
+}
+
+.portfolio {
+    
+}
+
+.contact {
+    clear:both;
+    padding-top: 10px;
+}
+
+
+/* PORTFOLIO TABS CONTENT */
+
+a {
+    outline:none;
+}
+
+.tabContainer{
+	background:#fff;
+	border:0px solid #fff;
+	margin:100px auto;
+	padding:0px;
+	position:relative;
+	width:100%;
+}
+	.tabContainer ul{
+		overflow:hidden;
+		border-right:1px solid #fff;
+		height:35px;
+		position:absolute;
+		z-index:100;
+		margin:0;
+		padding:0;
+	}
+	.tabContainer li{
+		float:left;
+		list-style:none;
+	}
+	.tabContainer li a{
+    border-radius: 5px;
+		background:#ECECEC;
+		border:1px solid #fcfcfc;
+		border-right:0;
+		color:#666;
+		cursor:pointer;
+		display:block;
+		height:35px;
+		line-height:35px;
+		padding:0 30px;
+		text-decoration:none;
+		text-transform:uppercase;
+	}
+	.tabContainer li a:hover{
+		background:#95BFCE;
+    color: #fff;
+	}
+	.tabContainer li a.active{
+		background:#fbfbfb;
+		border:1px solid #fff;
+		border-right:0;
+		color:#333;
+	}
+
+ .active{
+		background:#fbfbfb;
+		border:1px solid #fff;
+		border-right:0;
+		color:#333;
+	}
+	.tabDetails{
+		background:#fff;
+		border:1px solid #fff;
+		margin:34px 0 0;
+	}
+	.tabContents{
+		padding:20px
+	}
+	.tabContents h1{
+		font:normal 24px Georgia, serif;
+		padding:10px 0 10px;
+	}
+	.tabContents p{
+    color: #385c5b;
+    border-left: 6px double #D0D9DF;
+		padding:0 15px 10px;
+	}
+
+
+
+ /* Portfolio Images Effects
+   ============================== */
+
+.pcontainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;    
+   margin: 0 auto;
+   padding: 10px;    
+   
+    
+}
+
+.port1 {
+  border-radius: 10px;
+  width: 270px;
+  margin: 10px; 
+  display: inline-block;
+}
+
+.port2 {    
+  border-radius: 10px;
+  width: 270px;
+  margin: 10px;
+  display: inline-block;    
+}
+
+.port3 {    
+  border-radius: 10px;
+  width: 270px;
+  margin: 10px;
+  display: inline-block;    
+}
+
+.img-responsive {
+    width: 100% !important;
+    height: 160px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+}
+
+.hovereffect img {
+  display: block;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+   border-radius: 10px;
+  position: relative;
+  font-size: 17px;
+  background: rgba(255,0,0,0.4);
+  -webkit-transform: translatey(-100px);
+  -ms-transform: translatey(-100px);
+  transform: translatey(-100px);
+  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
+  padding: 5px;
+}
+
+.hovereffect a.info {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin: 40px 0 0;
+  padding: 7px 14px;
+}
+
+.hovereffect a.info:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect:hover .overlay {
+  border-radius: 10px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+  border-radius: 0px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -ms-transform: translatey(0);
+  -webkit-transform: translatey(0);
+  transform: translatey(0);
+}
+
+.hovereffect:hover a.info {
+   border-radius: 10px;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+
+
+    
+
+    /* Images
+   ================= */
+img {
+    width: 100%;
+    display: block;
+}
+
+   /* Slideshow
+   ================= */
+.wrapper {
+    width: 100%;
+    display: block;
+    position: static; 
+}
+
+#slideshow {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+#slideshow > div {
+  position: absolute;
+  display: block;
+}
+
+#slideshow {
+  padding-bottom: 58%;
+}
+
+
+
+    
+    /* Buttons
+   ========== */
+
+
+    /* Footer
+   ========== */
+footer {
+    padding: 5px;
+    background-color:#F9F9F9;
+    border: 0px solid #000;  
+    text-align: center;
+}
+
+
+
+
+
+
+/* Scroll up (Arrow) Effect
+=========================== */
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
