@@ -1,0 +1,26 @@
+/* MEDIA QUERIES FOR ANDROID
+==================================== */
+
+@media (min-width: 100px) and (max-width: 740px) {
+/* —- FOR SMARTPHONES —- */
+    
+    /*P Images*/
+    
+    .pcontainer {
+  width: 100%;       
+       
+}
+
+.port1 {
+  display: block;     
+}
+
+.port2 {    
+display: block;  
+}
+
+.port3 {    
+  display: block;   
+}
+    
+    }

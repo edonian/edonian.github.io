@@ -73,13 +73,15 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 });
 
 
+
+
 /* Tabs code for Portfolio */
 $(document).ready(function(){
 		$(".tabContents").hide(); // Hide all tab content divs by default
 		$(".tabContents:first").show(); // Show the first div of tab content by default
-		$("ul li a").click(function(){ //Fire the click event
+		$("ul.tcontainer li a").click(function(){ //Fire the click event
 			var activeTab = $(this).attr("href"); // Catch the click link
-			$(".tabContainer ul li a").removeClass("active"); // Remove pre-highlighted link
+			$(".tabContainer ul.tcontainer li a").removeClass("active"); // Remove pre-highlighted link
 			$(this).addClass("active"); // set clicked link to highlight state
 			$(".tabContents").hide(); // hide currently visible tab content div
 			$(activeTab).fadeIn(); // show the target tab content div by matching clicked link.
@@ -87,3 +89,21 @@ $(document).ready(function(){
 			return false; //prevent page scrolling on tab click
 		});
 	});
+
+
+/*Smooth scrolling*/
+
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
