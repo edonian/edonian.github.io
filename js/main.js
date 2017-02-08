@@ -91,6 +91,23 @@ $(document).ready(function(){
 	});
 
 
+/*Fade-in Portfolio Image*/
+$(window).scroll(function() {
+		$('.port-img').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("expandUp");
+			}
+		});
+	});
+
+$('.port-img').click(function() {
+		$(this).addClass("expandUp");
+	});
+
+
 /*Smooth scrolling*/
 
 $('a[href*=#]:not([href=#])').click(function() {
