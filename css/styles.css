@@ -180,6 +180,7 @@ EFFECTS ///  slideDown
         /*background: transparent;*/
         border: none;
         transition: 0.2s all linear;
+        
     }
     
     .primary.change-color {
@@ -683,6 +684,7 @@ transition: color 0.5s linear;
     }
     /* Buttons
    ========== */
+
     /* Footer
    ========== */
     
